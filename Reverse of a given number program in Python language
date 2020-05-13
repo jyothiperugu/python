@@ -1,0 +1,10 @@
+def words(s):
+    
+    data=s.split()
+    return len(data)
+    
+
+s=input()
+count=words(s)
+print(count)
+© 2020 GitHub, Inc.
