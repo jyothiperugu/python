@@ -1,0 +1,46 @@
+#include <stdio.h>
+int main()
+{
+ int num1 = 0, num2 = 0, num3 = 0;
+
+ while(num1 != -1)
+ {
+ // read and store an integer from user
+ printf("Enter an integer, -1 to stop: ");
+ scanf_s("%d", &num1);
+ // check whether user want to stop or not
+ if(num1 != -1)
+ {
+ // Let determine the divisibility of 5 and 6
+ num2 = num1 % 5; // num2 = 0, divisible
+ num3 = num1 % 6; // num3 = 0, divisible
+
+// in this example, all three conditions must be tested
+// do the equality comparison
+// Divisible by 5 AND 6?
+if((num2 == 0) && (num3 == 0))
+ printf("Is %d divisible by 5 and 6? true\n", num1);
+ else
+ printf("Is %d divisible by 5 and 6? false\n", num1);
+
+// Divisible by 5 OR 6?
+if((num2 == 0) ||(num3 == 0))
+ printf("Is %d divisible by 5 or 6? true\n", num1);
+ else
+ printf("Is %d divisible by 5 or 6? false\n", num1);
+
+// Divisible by 5 OR 6 but NOT both?
+if(((num2 == 0) ||(num3 == 0)) && !((num2 == 0) && (num3 == 0)))
+ printf("Is %d divisible by 5 or 6 but not both? true
+\n", num1);
+ else
+ printf("Is %d divisible by 5 or 6 but not both? false
+\n", num1);
+ }
+ printf("\n");
+ // check the while condition
+ }
+ // exit message
+ printf("You asked to stop. Thank you!\n");
+ return 0;
+}
